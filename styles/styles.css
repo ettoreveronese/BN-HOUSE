@@ -1,0 +1,644 @@
+/*/ DESING MADE BY ETTORE VERONESE WITH THE KIND HELP OF HUMANITY'S COLLECTIVE KNOWLEDGE (WWW/CHATGPT) /*/
+
+/*/
+color palette:
+- green: a3cc39
+- dark grey: 1f1f1f
+- *light grey: 7b7b7b
+- off white: f1f1f1 
+- *white: f9f9f9 
+/*/
+
+/*/
+dimensions:
+- title: 6vh
+- subtitle1: 4.5vh
+- main: 3vh
+- mid: 2vh
+- small: 1.5vh
+/*/
+
+
+
+/*/ ====================> GENERAL <==================== /*/
+@font-face {
+    font-family: openSans;
+    src: url(../assets/Open-Sans/static/OpenSans-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: openSans;
+}
+
+
+body {
+    background-color: #f1f1f1;
+    color: #1f1f1f;    
+    font-size: 3vh;
+    margin: 0;
+    padding: 0;
+}
+
+/*/ NAVBAR /*/
+.navbar {
+    z-index: 2;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    padding: 3vh; 
+    transition: 0.4s;
+    border-bottom: #1f1f1f 0.2vh solid;
+    background-color: #f1f1f1;
+    color: #1f1f1f;
+}
+
+.navbar .homebtn {
+    height: 8vh;
+}
+.navbar .homebtn img {
+    margin: 0; 
+    height: 8vh;
+    transition: 0.4s;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 3vh;
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #1f1f1f;
+}
+
+.navbar ul a:hover {
+    color: #a3cc39; 
+}
+
+.mainNavbar {
+    z-index: 2;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    padding: 3vh;
+    transition: 0.4s;
+    border-bottom: none;
+    background-color: rgba(31, 31, 31, 0);
+    color: #1f1f1f;
+}
+
+.mainNavbar img {
+    margin: 0;
+    height: 8vh;
+    transition: 0.4s;
+}
+
+.mainNavbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.mainNavbar ul li {
+    margin-left: 3vh;
+    display: flex;
+    align-items: center;
+}
+
+.mainNavbar ul li a {
+    text-decoration: none;
+    color: #f1f1f1;
+}
+
+.mainNavbar ul a:hover {
+    color: #a3cc39; 
+}
+
+/*/ FOOTER /*/
+footer {
+    background-color: #f1f1f1;
+    color: #1f1f1f;
+}
+.footerMain {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3vh;
+    border-top: #1f1f1f 0.2vh solid;
+    font-size: 2vh;
+}
+
+.footerMain img {
+    height: 25vh;
+}
+
+.footerMain div h2{
+    font-size: 3vh;
+    padding-bottom: 1vh;
+}
+
+.footerMain div ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footerMain div ul li a{
+    text-decoration: none;
+    color: #1f1f1f;
+}
+
+.footerMain a:hover {
+    color: #a3cc39; 
+}
+
+.footerCopyright {
+    display: flex;
+    justify-content: space-between;
+    border-top: #1f1f1f 0.1vh solid;
+    font-size: 1.5vh;
+    padding: 1vh;
+    padding-inline: 3vh;
+}
+.footerCopyright a{
+    text-decoration: none;
+    color: #1f1f1f;
+}
+
+.footerCopyright a:hover {
+    color: #a3cc39;
+}
+
+.contenuti {
+    background-color: #1f1f1f;
+    width: auto;
+    height: 100vh;
+    border: #1f1f1f solid 0.2vh;
+}
+
+
+/*/ ====================> HOME PAGE <==================== /*/
+#welcome {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    border-bottom: #1f1f1f 0.2vh solid;
+    z-index: -1;
+}
+
+#welcome h1{
+    position: absolute;
+    padding-top: 70vh;
+    padding-left: 8vh;
+
+    z-index: 30;
+    font-size: 6vh;
+    color:#f1f1f1
+}
+
+.welcomeSlides {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    white-space: normal;
+    filter: brightness(50%); 
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.welcomeSlides.show {
+    opacity: 1;
+}
+
+.home1 {
+    padding-inline: 6vh;
+    padding-bottom: 6vh;
+    padding-top: 5vh;
+    border-bottom: #1f1f1f solid 0.2vh;
+}
+
+.home1 h2 {
+    text-align: center;
+    padding-bottom: 3vh;
+    font-size: 4.5vh;
+}
+
+.home1-1{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.home1-2 {
+    padding-inline: 3vh;
+}
+
+.home1-2 h2 {
+    font-size: 3vh;
+    padding-bottom: 1vh;
+    color: #a3cc39;
+}
+
+.home1-2 p {
+    text-align: center;
+    font-size: 2vh;
+}
+
+.home-parallax1 {
+    background-image: url("../assets/home/home2.jpg");
+    min-height: 40vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home2 {
+    padding: 6vh;
+    padding-inline: 12vh;
+    background-color: #1f1f1f;
+    color: #f1f1f1;
+    text-align: end;
+    border-bottom: #a3cc39 solid 0.2vh;
+}
+
+.home2 h2 {
+    font-size: 4.5vh;  
+    padding-bottom: 3vh;
+    color: #a3cc39;   
+}
+
+.home2 p {
+    font-size: 3vh;
+}
+
+.home3 {
+    padding: 6vh;
+    padding-inline: 12vh;
+    border-bottom: #1f1f1f solid 0.2vh;
+}
+
+.home3 h2 {
+    font-size: 4.5vh;
+    padding-bottom: 3vh;     
+}
+
+.home3 p {
+    font-size: 3vh;
+}
+
+.home-parallax2 {
+    background-image: url("../assets/home/home3.jpg");
+    min-height: 40vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home4 {
+    padding: 6vh;
+    padding-inline: 12vh;
+    text-align: center; 
+    background-color: #1f1f1f;
+    border-top: #1f1f1f solid 0.2vh;
+    color: #f1f1f1;
+}
+
+.home4 a {
+    text-decoration: none;
+    color: #f1f1f1;
+}
+.home4 h2 {
+    font-size: 4.5vh; 
+    padding-bottom: 3vh;      
+}
+.home4 h2:hover {
+    color: #a3cc39;
+    cursor: pointer;
+}
+
+.home4 p {
+    font-size: 2.5vh;
+}
+
+
+/*/ ====================> IMMOBILI <==================== /*/
+#immobili {
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #1f1f1f;
+    color: #f1f1f1;
+    text-align: center;
+}
+
+#immobili img{
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    filter: brightness(40%);
+}
+#immobili h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+#immobili2 {
+    margin: 24vh
+}
+
+#immobili2 img{
+    width: 76vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3vh; 
+    border: #1f1f1f 0.2vh solid;
+}
+
+#immobili3 {
+    display: flex;
+    margin: 24vh;
+    justify-content: space-between;
+    
+}
+
+#immobile1 {
+
+}
+
+#immobile1 h2 {
+    text-align: center;
+    margin-bottom: 1vh;
+}
+ 
+#immobile1 img {
+    width: 30vw;
+    padding: 3vh;
+    border: #1f1f1f 0.2vh solid;
+}
+
+#immobile2 {
+
+}
+
+#immobile2 h2 {
+    text-align: center;
+    margin-bottom: 1vh;
+}
+
+#immobile2 img {
+    width: 30vw;
+    padding: 3vh;
+    border: #1f1f1f 0.2vh solid;
+}
+
+/* Slideshow container */
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+/*/ ====================> SISTEMI COSTRUTTIVI <==================== /*/
+
+
+/*/ ====================> CHI SIAMO <==================== /*/
+#about-section-top {
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #1f1f1f;
+    color: #f1f1f1;
+    text-align: center;
+}
+
+#about-section-top img{
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    filter: brightness(40%);
+}
+#about-section-top h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+#about-section {
+    padding-inline: 12vh;
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+    margin-bottom: 6vh;
+    display: flex;
+    align-items: center;
+    border-bottom: #1f1f1f solid 0.2vh;
+    border-top: #1f1f1f solid 0.2vh;
+}
+
+#about-section img {
+    height: 30vw;
+    max-height: 60vh;
+    margin-right: 6vh;
+    border: #1f1f1f solid 0.2vh;
+}
+
+#about-section p {
+    font-size: 3vh;
+    margin-bottom: 3vh;
+}
+#team-section{
+    padding-bottom: 6vh;
+    margin-inline: 6vh;
+}
+
+#team-section h2 {
+    text-align: center;
+    font-size: 3.5vh;
+    margin-bottom: 6vh;
+}
+
+#team-members {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#team-members div img{
+    height: 25vh;
+    border: #1f1f1f solid 0.2vh;
+}
+
+#team-members div p{
+    text-align: center;
+    font-size: 2.5vh;
+}
+
+/*/ ====================> CONTATTI <==================== /*/
+
+#contatti1 {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    background-color: #1f1f1f;
+    color: #f1f1f1;
+    text-align: center;
+}
+
+#contatti1 img {
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    filter: brightness(40%);
+}
+
+#contatti1 div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+#contatti1 h1{
+    font-size: 6vh;
+    padding-bottom: 3vh;
+}
+#contatti1 p {
+    font-size: 3vh;
+}
+
+#contatti2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 3vh;   
+    padding-inline: 3vh;
+    text-align: center;
+}
+
+#contatti2 .contatti2-1 {
+    margin: 3vh;
+    padding: 3vh;
+    border: #1f1f1f solid 0.2vh;
+}
+
+#contatti2 .contatti2-1 h2{
+    font-size: 3vh;
+}
+
+#contatti2 .contatti2-2 {
+    margin: 3vh;
+    border: #1f1f1f solid 0.2vh;
+}
+
+
+
+
+/*/ ====================> MOBILE DEVICES <==================== /*/
+
+@media (max-width: 1000px) {
+    nav ul {
+        padding: 10px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
