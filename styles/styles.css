@@ -30,12 +30,12 @@ dimensions:
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
     font-family: openSans;
 }
 
 
 body {
+    overflow-x: hidden;
     background-color: #f1f1f1;
     color: #1f1f1f;    
     font-size: 3vh;
@@ -147,7 +147,7 @@ footer {
 }
 
 .footerMain img {
-    height: 25vh;
+    height: 10vh;
 }
 
 .footerMain div h2{
@@ -209,13 +209,12 @@ footer {
     position: absolute;
     padding-top: 70vh;
     padding-left: 8vh;
-
     z-index: 30;
     font-size: 6vh;
     color:#f1f1f1
 }
 
-.welcomeSlides {
+.welcomeSlides {    
     position: absolute;
     min-width: 100%;
     min-height: 100%;
@@ -350,6 +349,7 @@ footer {
     background-color: #1f1f1f;
     color: #f1f1f1;
     text-align: center;
+    border-bottom: #1f1f1f 0.2vh solid;
 }
 
 #immobili img{
@@ -366,54 +366,38 @@ footer {
 }
 
 #immobili2 {
-    margin: 24vh
+    margin: 10vw;
 }
 
 #immobili2 img{
-    width: 76vw;
+    width: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding: 3vh; 
     border: #1f1f1f 0.2vh solid;
 }
 
 #immobili3 {
     display: flex;
-    margin: 24vh;
+    margin: 10vw;
     justify-content: space-between;
     
 }
 
-#immobile1 {
-
+#immobili3 div {
+    width: 35vw;
 }
 
-#immobile1 h2 {
-    text-align: center;
-    margin-bottom: 1vh;
-}
- 
-#immobile1 img {
-    width: 30vw;
-    padding: 3vh;
+#immobili3 a img {
+    width: 100%;
     border: #1f1f1f 0.2vh solid;
 }
 
-#immobile2 {
-
-}
-
-#immobile2 h2 {
+#immobili3 h2 {
     text-align: center;
-    margin-bottom: 1vh;
+    margin-bottom: 3vh;
 }
 
-#immobile2 img {
-    width: 30vw;
-    padding: 3vh;
-    border: #1f1f1f 0.2vh solid;
-}
 
 /* Slideshow container */
 
@@ -580,6 +564,7 @@ footer {
     background-color: #1f1f1f;
     color: #f1f1f1;
     text-align: center;
+    border-bottom: #1f1f1f 0.2vh solid;
 }
 
 #contatti1 img {
@@ -606,10 +591,9 @@ footer {
 
 #contatti2 {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     padding: 3vh;   
     padding-inline: 3vh;
-    text-align: center;
 }
 
 #contatti2 .contatti2-1 {
