@@ -10,7 +10,7 @@ color palette:
 /*/
 
 /*/
-dimensions:
+Dimensions:
 - title: 6vh
 - subtitle1: 4.5vh
 - main: 3vh
@@ -20,7 +20,7 @@ dimensions:
 
 
 
-/*/ ====================> GENERAL <==================== /*/
+/*/ ====================> UNIVERSAL <==================== /*/
 @font-face {
     font-family: openSans;
     src: url(../assets/Open-Sans/static/OpenSans-Regular.ttf);
@@ -90,7 +90,7 @@ body {
     color: #a3cc39; 
 }
 
-.mainNavbar {
+.top-navbar {
     z-index: 2;
     position: fixed;
     display: flex;
@@ -105,32 +105,36 @@ body {
     color: #1f1f1f;
 }
 
-.mainNavbar img {
+.top-navbar img {
     margin: 0;
     height: 8vh;
     transition: 0.4s;
 }
 
-.mainNavbar ul {
+.top-navbar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
 }
 
-.mainNavbar ul li {
+.top-navbar ul li {
     margin-left: 3vh;
     display: flex;
     align-items: center;
 }
 
-.mainNavbar ul li a {
+.top-navbar ul li a {
     text-decoration: none;
     color: #f1f1f1;
 }
 
-.mainNavbar ul a:hover {
+.top-navbar ul a:hover {
     color: #a3cc39; 
+}
+
+.mobile-navbar {
+    display: none;
 }
 
 /*/ FOOTER /*/
@@ -216,8 +220,10 @@ footer {
 
 .welcomeSlides {    
     position: absolute;
-    min-width: 100%;
-    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
     white-space: normal;
     filter: brightness(50%); 
     opacity: 0;
@@ -353,10 +359,12 @@ footer {
 }
 
 #immobili img{
-    min-width: 100%;
-    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
     z-index: -1;
-    filter: brightness(40%);
+    filter: brightness(30%);
 }
 #immobili h1{
     position: absolute;
@@ -494,10 +502,12 @@ footer {
 }
 
 #about-section-top img{
-    min-width: 100%;
-    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
     z-index: -1;
-    filter: brightness(40%);
+    filter: brightness(30%);
 }
 #about-section-top h1{
     position: absolute;
@@ -568,10 +578,12 @@ footer {
 }
 
 #contatti1 img {
-    min-width: 100%;
-    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
     z-index: -1;
-    filter: brightness(40%);
+    filter: brightness(30%);
 }
 
 #contatti1 div {
@@ -615,14 +627,648 @@ footer {
 
 
 /*/ ====================> MOBILE DEVICES <==================== /*/
-
+/*/
+Dimensions:
+- title: 8vw
+- subtitle1: 5.5vw
+- main: 4.5vw
+- mid: 3.5vw
+- small: 2.5vw
+/*/
 @media (max-width: 1000px) {
-    nav ul {
-        padding: 10px;
+
+    /*/ ====================> UNIVERSAL <==================== /*/
+    body {
+        font-size: 3vw;
+    }
+    
+    /*/ NAVBAR /*/
+    .mobile-navbar {
+        z-index: 100;
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 8vh;
+        padding: 3vw; 
+        transition: 0;
+        border-bottom: #1f1f1f 0.2vh solid;
+        background-color: #f1f1f1;
+        color: #1f1f1f;
     }
 
-    nav ul li {
-        display: block;
-        margin: 10px 0;
+    .mobile-navbar .homebtn {
+        height: 6vh;
     }
+    .mobile-navbar .homebtn img {
+        margin: 0; 
+        height: 6vh;
+        transition: 0.4s;
+    }
+    
+    .mobile-navbar .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-right: 1vh;
+        width: 3vh;
+        height: 2vh;
+        justify-content: space-between;
+        z-index: 1;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    .menu-toggle input {
+        width: 3vh;
+        height: 2vh;
+        position: absolute;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 2;
+    }
+
+    .menu-toggle span {
+        width: 3vh;
+        height: 0.2vh;
+        position: relative;
+        background: #1f1f1f;
+        border-radius: 0.2vh;
+        z-index: 1;
+        transform-origin: 0.4vh 0;
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+                background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+                opacity 0.55s ease;
+    }
+    
+    .menu-toggle span:first-child {
+        transform-origin: 0% 0%;
+    }
+
+    .menu-toggle span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+
+    .menu-toggle input:checked ~ span {
+        opacity: 1;
+        transform: rotate(45deg);
+        background: #1f1f1f;
+    }
+
+    .menu-toggle input:checked ~ span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    .menu-toggle input:checked ~ span:nth-last-child(2) {
+        transform: rotate(-45deg);
+    }
+
+    .menu-toggle ul {
+        position: absolute;
+        width: 70vw;
+        height: 110vh;
+        top: 0;
+        right: -6vh;
+        transform: translate(110%, 0);
+        margin: -5vh 0 0 -5vh;
+        padding-top: 10vh;
+        background-color: #f1f1f1;
+        border: #1f1f1f solid 0.2vh;
+        -webkit-font-smoothing: antialiased;
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+
+    .menu-toggle input:checked ~ ul {
+        transform: none;
+    }
+
+    .menu-toggle ul li {
+        margin-left: 4vw;
+        margin-bottom: 1vw;
+        display: flex;
+        align-items: center;
+    }
+    
+    .menu-toggle ul li a {
+        font-size: 4.5vw;   
+        text-decoration: none;
+        color: #1f1f1f;
+    }
+
+    .menu-toggle ul li a:hover {
+        color: #a3cc39; 
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .top-navbar {
+        display: none;
+    }
+    
+    /*/ FOOTER /*/
+    footer {
+        background-color: #f1f1f1;
+        color: #1f1f1f;
+    }
+    .footerMain {
+        display: flex;
+        flex-direction: column;
+        gap: 3.5vw;
+        padding: 3.5vw;
+        border-top: #1f1f1f 0.2vw solid;
+        font-size: 3.5vw;
+    }
+    
+    .footerMain img {
+        height: 15vw;
+        width: 15vw;
+    }
+    
+    .footerMain div h2{
+        font-size: 3.5vw;
+        padding-bottom: 2vw;
+    }
+    
+    .footerMain div ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .footerMain div ul li {
+        margin-bottom: 1vw;
+    }
+    
+    .footerMain div ul li a{
+        text-decoration: none;
+        color: #1f1f1f;
+    }
+    
+    .footerMain a:hover {
+        color: #a3cc39; 
+    }
+    
+    .footerCopyright {
+        display:block;
+        width: 100vw;
+        border-top: #1f1f1f 0.1vw solid;
+        font-size: 2.5vw;
+        text-align: center;
+        padding: 2vw;
+        padding-inline: 3vw;
+    }
+    .footerCopyright a{
+        text-decoration: none;
+        color: #1f1f1f;
+    }
+    
+    .footerCopyright a:hover {
+        color: #a3cc39;
+    }
+    
+    .contenuti {
+        background-color: #1f1f1f;
+        width: auto;
+        height: 100vw;
+        border: #1f1f1f solid 0.2vw;
+    }
+    
+    
+    /*/ ====================> HOME PAGE <==================== /*/
+    #welcome {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+        border-bottom: #1f1f1f 0.2vw solid;
+        z-index: -1;
+    }
+    
+    #welcome h1{
+        position: absolute;
+        padding-top: 30vh;
+        padding-inline: 3.5vw;
+        z-index: 30;
+        font-size: 8vw;
+        color:#f1f1f1
+    }
+    
+    .welcomeSlides {    
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        white-space: normal;
+        filter: brightness(50%); 
+        opacity: 0;
+        transition: opacity 1s;
+    }
+    
+    .welcomeSlides.show {
+        opacity: 1;
+    }
+    
+    .home1 {
+        padding-inline: 5.5vw;
+        padding-bottom: 5.5vw;
+        padding-top: 5.5vw;
+        border-bottom: #1f1f1f solid 0.2vw;
+    }
+    
+    .home1 h2 {
+        text-align: center;
+        padding-bottom: 5.5vw;
+        font-size: 5.5vw;
+    }
+    
+    .home1-1{
+        display: flex;
+        flex-direction: column;
+        gap: 5.5vw;
+    }
+    
+    .home1-2 {
+        padding-inline: 0;
+    }
+    
+    .home1-2 h2 {
+        font-size: 4.5vw;
+        padding-bottom: 1vw;
+        color: #a3cc39;
+    }
+    
+    .home1-2 p {
+        text-align: center;
+        font-size: 3.5vw;
+    }
+    
+    .home-parallax1 {
+        background-image: url("../assets/home/home2.jpg");
+        min-height: 30vh;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .home2 {
+        padding: 5.5vw;
+        padding-inline: 5.5vw;
+        background-color: #1f1f1f;
+        color: #f1f1f1;
+        text-align: center;
+        border-bottom: #a3cc39 solid 0.2vw;
+    }
+    
+    .home2 h2 {
+        font-size: 5.5vw;  
+        padding-bottom: 3.5vw;
+        color: #a3cc39;   
+    }
+    
+    .home2 p {
+        font-size: 4.5vw;
+    }
+    
+    .home3 {
+        padding: 5.5vw;
+        padding-inline: 5.5vw;
+        text-align: center;
+        border-bottom: #1f1f1f solid 0.2vw;
+    }
+    
+    .home3 h2 {
+        font-size: 5.5vw;
+        padding-bottom: 3.5vw;     
+    }
+    
+    .home3 p {
+        font-size: 4.5vw;
+    }
+    
+    .home-parallax2 {
+        background-image: url("../assets/home/home3.jpg");
+        min-height: 30vh;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .home4 {
+        padding: 5.5vw;
+        padding-inline: 5.5vw;
+        text-align: center; 
+        background-color: #1f1f1f;
+        border-top: #1f1f1f solid 0.2vw;
+        color: #f1f1f1;
+    }
+    
+    .home4 a {
+        text-decoration: none;
+        color: #f1f1f1;
+    }
+    .home4 h2 {
+        font-size: 5.5vw; 
+        padding-bottom: 3.5vw;      
+    }
+    .home4 h2:hover {
+        color: #a3cc39;
+        cursor: pointer;
+    }
+    
+    .home4 p {
+        font-size: 3.5vw;
+    }
+    
+    
+    /*/ ====================> IMMOBILI <==================== /*/
+    #immobili {
+        overflow: hidden;
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+        background-color: #1f1f1f;
+        color: #f1f1f1;
+        text-align: center;
+        border-bottom: #1f1f1f 0.2vw solid;
+    }
+    
+    #immobili img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        z-index: -1;
+        filter: brightness(30%);
+    }
+    #immobili h1{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 8vw;
+        transform: translate(-50%, -50%)
+    }
+    
+    #immobili2 {
+        margin: 10vw;
+    }
+    
+    #immobili2 img{
+        width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border: #1f1f1f 0.2vw solid;
+    }
+    
+    #immobili3 {
+        display: flex;
+        margin: 10vw;
+        justify-content: space-between;
+        
+    }
+    
+    #immobili3 div {
+        width: 35vw;
+    }
+    
+    #immobili3 a img {
+        width: 100%;
+        border: #1f1f1f 0.2vw solid;
+    }
+    
+    #immobili3 h2 {
+        text-align: center;
+        margin-bottom: 3vw;
+    }
+    
+    
+    /* SLIDESHOW CONTAINER */
+    
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+    
+    .mySlides {
+      display: none;
+    }
+    
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+    
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+    
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+    
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    
+    @keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+    
+    
+    /*/ ====================> SISTEMI COSTRUTTIVI <==================== /*/
+    
+    
+    /*/ ====================> CHI SIAMO <==================== /*/
+    #about-section-top {
+        overflow: hidden;
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+        background-color: #1f1f1f;
+        color: #f1f1f1;
+        text-align: center;
+    }
+    
+    #about-section-top img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        z-index: -1;
+        filter: brightness(30%);
+    }
+    #about-section-top h1{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 8vw;
+    }
+    
+    #about-section {
+        padding-inline: 12vw;
+        padding-top: 6vw;
+        padding-bottom: 6vw;
+        margin-bottom: 6vw;
+        display: flex;
+        align-items: center;
+        border-bottom: #1f1f1f solid 0.2vw;
+        border-top: #1f1f1f solid 0.2vw;
+    }
+    
+    #about-section img {
+        height: 30vw;
+        max-height: 60vw;
+        margin-right: 6vw;
+        border: #1f1f1f solid 0.2vw;
+    }
+    
+    #about-section p {
+        font-size: 3vw;
+        margin-bottom: 3vw;
+    }
+    #team-section{
+        padding-bottom: 6vw;
+        margin-inline: 6vw;
+    }
+    
+    #team-section h2 {
+        text-align: center;
+        font-size: 3.5vw;
+        margin-bottom: 6vw;
+    }
+    
+    #team-members {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    #team-members div img{
+        height: 25vw;
+        border: #1f1f1f solid 0.2vw;
+    }
+    
+    #team-members div p{
+        text-align: center;
+        font-size: 2.5vw;
+    }
+    
+    /*/ ====================> CONTATTI <==================== /*/
+    
+    #contatti1 {
+        position: relative;
+        overflow: hidden;
+        height: 100vh;
+        width: 100vw;
+        background-color: #1f1f1f;
+        color: #f1f1f1;
+        text-align: center;
+        border-bottom: #1f1f1f 0.2vw solid;
+    }
+    
+    #contatti1 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        z-index: -1;
+        filter: brightness(30%);
+    }
+    
+    #contatti1 div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
+    
+    #contatti1 h1{
+        font-size: 8vw;
+        padding-bottom: 3.5vw;
+    }
+    #contatti1 p {
+        font-size: 5.5vw;
+    }
+    
+    #contatti2 {
+        display: unset;
+        padding: 0vw;   
+        padding-inline: 0vw;
+    }
+    
+    #contatti2 .contatti2-1 {
+        margin: 4.5vw;
+        padding: 4.5vw;
+        border: #1f1f1f solid 0.2vw;
+        font-size: 4.5vw;
+    }
+    
+    #contatti2 .contatti2-1 h2{
+        font-size: 4.5vw;
+    }
+
+    #contatti2 .contatti2-1 p{
+        margin-bottom: 1vw;
+    }
+    
+    #contatti2 .contatti2-2 {
+        margin: 4.5vw;
+        height: 94vw;
+        border: #1f1f1f solid 0.2vw;
+    }
+
 }

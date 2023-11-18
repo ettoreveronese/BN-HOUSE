@@ -10,12 +10,12 @@ window.onscroll = function() {
         // Scrolling down, hide the navbar
         navbar.style.top = "-10vh"; // Adjust the value as needed
     }
-    navbar.classList.toggle("mainNavbar", !(window.scrollY > 0));
+    navbar.classList.toggle("top-navbar", !(window.scrollY > 0));
     prevScrollPos = currentScrollPos;
 };
 
 document.addEventListener("DOMContentLoaded", function() {
-    document.querySelector(".navbar").classList.toggle("mainNavbar", !(window.scrollY > 0));
+    document.querySelector(".navbar").classList.toggle("top-navbar", !(window.scrollY > 0));
 });
 
 var slideIndex = 0;
