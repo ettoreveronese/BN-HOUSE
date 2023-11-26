@@ -53,6 +53,7 @@ body {
     width: 100%;
     height: 10vh;
     padding: 3vh; 
+    top: 0;
     transition: 0.4s;
     border-bottom: #1f1f1f 0.2vh solid;
     background-color: #f1f1f1;
@@ -60,11 +61,11 @@ body {
 }
 
 .navbar .homebtn {
-    height: 8vh;
+    height: 5vh;
 }
 .navbar .homebtn img {
     margin: 0; 
-    height: 8vh;
+    height: 5vh;
     transition: 0.4s;
 }
 
@@ -151,7 +152,9 @@ footer {
 }
 
 .footerMain img {
-    height: 10vh;
+    margin-top: 1vh;
+    margin-left: 1vh;
+    height: 4.5vh;
 }
 
 .footerMain div h2{
@@ -268,7 +271,8 @@ footer {
 }
 
 .home-parallax1 {
-    background-image: url("../assets/home/home2.jpg");
+    background-image: url("../assets/home/home2.png");
+    filter: brightness(60%);
     min-height: 40vh;
     background-attachment: fixed;
     background-position: center;
@@ -288,7 +292,7 @@ footer {
 .home2 h2 {
     font-size: 4.5vh;  
     padding-bottom: 3vh;
-    color: #a3cc39;   
+    color: #f1f1f1;   
 }
 
 .home2 p {
@@ -311,8 +315,9 @@ footer {
 }
 
 .home-parallax2 {
-    background-image: url("../assets/home/home3.jpg");
+    background-image: url("../assets/home/home3.png");
     min-height: 40vh;
+    filter: brightness(60%);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -488,7 +493,92 @@ footer {
 
 
 /*/ ====================> SISTEMI COSTRUTTIVI <==================== /*/
+#sistemi1 {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    background-color: #1f1f1f;
+    color: #f1f1f1;
+    text-align: center;
+    border-bottom: #1f1f1f 0.2vh solid;
+}
 
+#sistemi1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    z-index: -1;
+    filter: brightness(30%);
+}
+
+#sistemi1 div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+#sistemi1 h1{
+    font-size: 6vh;
+    padding-bottom: 3vh;
+}
+#sistemi1 p {
+    font-size: 3vh;
+}
+
+#sistemi2 {
+    display: flex;
+    flex-direction: column;
+    gap: 6vh;
+    width: auto;
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+}
+
+.sistemi2-1 {
+    margin: auto;
+    width: 100vh;
+}
+
+.sistemi2-1, th, td {
+    border: #1f1f1f solid 0.2vh;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.sistemi2-1 h1 {
+    font-size: 3vh;
+    padding: 1vh;
+}
+
+.sistemi2-1 p {
+    font-size: 1.5vh;
+    padding: 1vh;
+}
+
+.sistemi2-1 ul {
+    padding: 1vh;
+    padding-left: 3vh;
+    font-size: 2vh;
+}
+
+.sistemi2-1 img {
+    display: block;
+    max-height: 30vh;
+    max-width: 30vh;
+    padding: 1vh;
+    margin: auto;
+    
+}
+
+.sistemi2-1 div {
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+}
 
 /*/ ====================> CHI SIAMO <==================== /*/
 #about-section-top {
@@ -522,22 +612,25 @@ footer {
     padding-bottom: 6vh;
     margin-bottom: 6vh;
     display: flex;
+    gap: 6vh;
     align-items: center;
     border-bottom: #1f1f1f solid 0.2vh;
     border-top: #1f1f1f solid 0.2vh;
 }
 
+#about-section div {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    font-size: 3vh;
+}
+
 #about-section img {
     height: 30vw;
     max-height: 60vh;
-    margin-right: 6vh;
     border: #1f1f1f solid 0.2vh;
 }
 
-#about-section p {
-    font-size: 3vh;
-    margin-bottom: 3vh;
-}
 #team-section{
     padding-bottom: 6vh;
     margin-inline: 6vh;
@@ -614,6 +707,11 @@ footer {
     border: #1f1f1f solid 0.2vh;
 }
 
+#contatti2 .contatti2-1 img {
+    height: 6vh;
+    width: auto;
+}
+
 #contatti2 .contatti2-1 h2{
     font-size: 3vh;
 }
@@ -659,11 +757,11 @@ Dimensions:
     }
 
     .mobile-navbar .homebtn {
-        height: 6vh;
+        height: 3.5vh;
     }
     .mobile-navbar .homebtn img {
         margin: 0; 
-        height: 6vh;
+        height: 3.5vh;
         transition: 0.4s;
     }
     
@@ -784,8 +882,10 @@ Dimensions:
     }
     
     .footerMain img {
-        height: 15vw;
-        width: 15vw;
+        height: auto;
+        width: 40vw;
+        padding-top: 1vw;
+        padding-bottom: 1vw;
     }
     
     .footerMain div h2{
@@ -850,7 +950,7 @@ Dimensions:
     
     #welcome h1{
         position: absolute;
-        padding-top: 30vh;
+        padding-top: 60vh;
         padding-inline: 3.5vw;
         z-index: 30;
         font-size: 8vw;
@@ -908,7 +1008,7 @@ Dimensions:
     }
     
     .home-parallax1 {
-        background-image: url("../assets/home/home2.jpg");
+        background-image: url("../assets/home/home2.png");
         min-height: 30vh;
         background-attachment: fixed;
         background-position: center;
@@ -952,7 +1052,7 @@ Dimensions:
     }
     
     .home-parallax2 {
-        background-image: url("../assets/home/home3.jpg");
+        background-image: url("../assets/home/home3.png");
         min-height: 30vh;
         background-attachment: fixed;
         background-position: center;
@@ -1130,7 +1230,94 @@ Dimensions:
     
     
     /*/ ====================> SISTEMI COSTRUTTIVI <==================== /*/
-    
+    #sistemi1 {
+        position: relative;
+        overflow: hidden;
+        height: 100vh;
+        width: 100vw;
+        background-color: #1f1f1f;
+        color: #f1f1f1;
+        text-align: center;
+        border-bottom: #1f1f1f 0.2vw solid;
+    }
+
+    #sistemi1 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        z-index: -1;
+        filter: brightness(30%);
+    }
+
+    #sistemi1 div {
+        position: absolute;
+        width: 70vw;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
+
+    #sistemi1 h1{
+        font-size: 8vw;
+        padding-bottom: 3.5vw;
+    }
+    #sistemi1 p {
+        font-size: 5.5vw;
+    }
+
+    #sistemi2 {
+        display: flex;
+        flex-direction: column;
+        gap: 4.5vw;
+        width: auto;
+        padding-top: 4.5vw;
+        padding-bottom: 4.5vw;
+    }
+
+    .sistemi2-1 {
+        margin: auto;
+        width: 91vw;
+    }
+
+    .sistemi2-1, th, td {
+        border: #1f1f1f solid 0.2vw;
+        vertical-align: middle;
+        text-align: left;
+    }
+
+    .sistemi2-1 h1 {
+        font-size: 4vw;
+        padding: 1.5vw;
+    }
+
+    .sistemi2-1 p {
+        font-size: 2.5vw;
+        padding: 1.5vw;
+        font-weight: normal;
+    }
+
+    .sistemi2-1 ul {
+        padding: 1.5vw;
+        padding-left: 5vw;
+        font-size: 3vw;
+        font-weight: normal;
+    }
+
+    .sistemi2-1 img {
+        display: block;
+        max-height: 30vw;
+        max-width: 30vw;
+        padding: 1vw;
+        margin: auto;
+        
+    }
+
+    .sistemi2-1 div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     
     /*/ ====================> CHI SIAMO <==================== /*/
     #about-section-top {
@@ -1160,51 +1347,60 @@ Dimensions:
     }
     
     #about-section {
-        padding-inline: 12vw;
-        padding-top: 6vw;
-        padding-bottom: 6vw;
-        margin-bottom: 6vw;
+        padding-inline: 5.5vw;
+        padding-top: 5.5vw;
+        padding-bottom: 5.5vw;
+        margin-bottom: 5.5vw;
         display: flex;
+        flex-direction: column;
+        gap: 5.5vw;
         align-items: center;
         border-bottom: #1f1f1f solid 0.2vw;
         border-top: #1f1f1f solid 0.2vw;
     }
+
+    #about-section div{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 3.5vw;
+        gap: 3.5vw;
+    }
     
     #about-section img {
-        height: 30vw;
-        max-height: 60vw;
-        margin-right: 6vw;
+        max-height: 20vw;
+        width: 100%;
+        object-fit: cover;
+        margin-right: 0vw;
         border: #1f1f1f solid 0.2vw;
     }
-    
-    #about-section p {
-        font-size: 3vw;
-        margin-bottom: 3vw;
-    }
+
     #team-section{
-        padding-bottom: 6vw;
-        margin-inline: 6vw;
+        padding-bottom: 5.5vw;
+        margin-inline: 5.5vw;
     }
     
     #team-section h2 {
         text-align: center;
-        font-size: 3.5vw;
-        margin-bottom: 6vw;
+        font-size: 5.5vw;
+        margin-bottom: 5.5vw;
     }
     
     #team-members {
         display: flex;
-        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        gap: 5.5vw;
     }
     
     #team-members div img{
-        height: 25vw;
+        height: 40vw;
         border: #1f1f1f solid 0.2vw;
     }
     
     #team-members div p{
         text-align: center;
-        font-size: 2.5vw;
+        font-size: 3.5vw;
     }
     
     /*/ ====================> CONTATTI <==================== /*/
@@ -1251,10 +1447,17 @@ Dimensions:
     }
     
     #contatti2 .contatti2-1 {
+        display: flex;
+        flex-direction: column; 
         margin: 4.5vw;
         padding: 4.5vw;
         border: #1f1f1f solid 0.2vw;
         font-size: 4.5vw;
+    }
+
+    #contatti2 .contatti2-1 img {
+        height: auto;
+        width: 50vw;
     }
     
     #contatti2 .contatti2-1 h2{
