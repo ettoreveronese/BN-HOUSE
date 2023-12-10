@@ -25,4 +25,4 @@ window.onscroll = function() {
 // LOAD THE RIGHT NAVBAR
 document.addEventListener("DOMContentLoaded", function() {
     document.querySelector(".navbar").classList.toggle("top-navbar", !(window.scrollY > 0));
-});
+}); 

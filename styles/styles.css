@@ -238,15 +238,13 @@ footer {
 }
 
 .home1 {
-    padding-inline: 6vh;
-    padding-bottom: 6vh;
-    padding-top: 5vh;
+    padding: 6vh;
     border-bottom: #1f1f1f solid 0.2vh;
 }
 
 .home1 h2 {
     text-align: center;
-    padding-bottom: 3vh;
+    padding-bottom: 6vh;
     font-size: 4.5vh;
 }
 
@@ -260,14 +258,14 @@ footer {
 }
 
 .home1-2 h2 {
-    font-size: 3vh;
+    font-size: 3.5vh;
     padding-bottom: 1vh;
     color: #a3cc39;
 }
 
 .home1-2 p {
     text-align: center;
-    font-size: 2vh;
+    font-size: 2.5vh;
 }
 
 .home-parallax1 {
@@ -282,11 +280,10 @@ footer {
 
 .home2 {
     padding: 6vh;
-    padding-inline: 12vh;
+    padding-left: 40vw;
     background-color: #1f1f1f;
     color: #f1f1f1;
     text-align: end;
-    border-bottom: #a3cc39 solid 0.2vh;
 }
 
 .home2 h2 {
@@ -301,7 +298,7 @@ footer {
 
 .home3 {
     padding: 6vh;
-    padding-inline: 12vh;
+    padding-right: 40vw;
     border-bottom: #1f1f1f solid 0.2vh;
 }
 
@@ -329,7 +326,6 @@ footer {
     padding-inline: 12vh;
     text-align: center; 
     background-color: #1f1f1f;
-    border-top: #1f1f1f solid 0.2vh;
     color: #f1f1f1;
 }
 
@@ -338,9 +334,9 @@ footer {
     color: #f1f1f1;
 }
 .home4 h2 {
-    font-size: 4.5vh; 
-    padding-bottom: 3vh;      
+    font-size: 4vh;    
 }
+
 .home4 h2:hover {
     color: #a3cc39;
     cursor: pointer;
@@ -348,6 +344,49 @@ footer {
 
 .home4 p {
     font-size: 2.5vh;
+}
+
+.home5 {
+   padding: 6vh;
+    border-bottom: #1f1f1f solid 0.2vh;
+}
+
+.home5 h2 {
+    text-align: center;
+    padding-bottom: 6vh;
+    font-size: 4.5vh;
+}
+
+.home5-1{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.home5-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5vh;
+    margin-inline: 1.5vh;
+}
+
+.home5-2 h2 {
+    font-size: 3vh;
+    padding-bottom: 0;
+    color: #1f1f1f;
+}
+
+.home5-2 p {
+    text-align: center;
+    font-size: 2.5vh;
+}
+.home5-2 img {
+    margin-bottom: 2vh;
+    width: 25vw;
+    height: 15vw;
+    object-fit: cover;
+    object-position: center center;
+    border: #1f1f1f solid 0.2vh;
 }
 
 
@@ -378,117 +417,90 @@ footer {
     transform: translate(-50%, -50%)
 }
 
-#immobili2 {
-    margin: 10vw;
-}
-
-#immobili2 img{
-    width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border: #1f1f1f 0.2vh solid;
-}
-
-#immobili3 {
+.immobili1 {
+    margin: 12vh;
     display: flex;
-    margin: 10vw;
-    justify-content: space-between;
-    
+    flex-direction: column;
+    gap: 2.5vh;
 }
-
-#immobili3 div {
-    width: 35vw;
-}
-
-#immobili3 a img {
-    width: 100%;
-    border: #1f1f1f 0.2vh solid;
-}
-
-#immobili3 h2 {
+.immobili1 .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
-    margin-bottom: 3vh;
+    font-size: 3.5vh;
+    list-style: none;
 }
 
-
-/* Slideshow container */
-
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+.immobili1  a{
+  text-decoration: none;
 }
 
-.mySlides {
-  display: none;
+.immobili1 .slideshow-container {
+    position: relative;
+    margin: auto;
+    height: 60vh;
+    width: 60vw;
+    text-align: center;
+  }
+  
+.immobili1 .mySlides {
+    width: 100%;
+    height: 100%;
+    transition:ease 1s;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+    display: none;
+    border: #1f1f1f solid 0.2vh;
+  }
+  
+.immobili1 .prev, .next{
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    left: 1%;
+    width: auto;
+    color: #1f1f1f;
+    background-color: rgba(31, 31, 31, 0.2);
+    border-radius: 20%;
+    height: min-content;
+    padding-inline: 1.5vh;
+    font-weight: bold;
+    font-size: 3.5vh;
+    transition: 0.6s ease;
+    user-select: none;
 }
 
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+.immobili1 .prev:hover {
+    color: #1f1f1f;
+    background-color: #f1f1f1;
 }
 
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+.immobili1 .next:hover {
+    color: #1f1f1f;
+    background-color: #f1f1f1;
+}
+  
+.immobili1 .next {
+    left: auto;
+    right: 1%;
 }
 
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+#immobili2 {
+    padding: 6vh;
+    padding-inline: 12vh;
+    text-align: center; 
+    background-color: #1f1f1f;
+    color: #f1f1f1;
 }
 
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
+#immobili2 a {
+    text-decoration: none;
+    color: #f1f1f1;
 }
-
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+#immobili2 h2 {
+    font-size: 3.5vh;
 }
 
 
@@ -508,7 +520,7 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center center;
+    object-position: center;
     z-index: -1;
     filter: brightness(30%);
 }
@@ -526,6 +538,42 @@ footer {
 }
 #sistemi1 p {
     font-size: 3vh;
+}
+
+#sistemi1-2 {
+    display: flex;
+    gap: 6vh;
+    padding: 6vh;
+}
+
+#sistemi1-2 a {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    height: 45vh;
+    padding: 1vh;
+    border: #1f1f1f solid 0.2vh;
+}
+
+#sistemi1-2 a p{
+    position: absolute;
+    z-index: 2;
+    font-size: 3vh;
+    color: #f1f1f1;
+}
+
+#sistemi1-2 a img{
+    position: absolute;
+    padding: 1vh;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    filter: brightness(60%);
 }
 
 #sistemi2 {
@@ -578,6 +626,30 @@ footer {
     
     align-items: center;
     justify-content: center;
+}
+
+.indietro {
+    position: fixed;
+    width: 100vw;
+    text-align: end;   
+}
+
+.indietro p {
+    text-decoration: none;
+    color: #1f1f1f;
+    font-size: 2.5vh;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    padding-right: 1.5vh;
+}
+
+.indietro a {
+    text-decoration: none;
+}
+
+.indietro p:hover {
+    color: #a3cc39;
+
 }
 
 /*/ ====================> CHI SIAMO <==================== /*/
@@ -708,7 +780,7 @@ footer {
 }
 
 #contatti2 .contatti2-1 img {
-    height: 6vh;
+    height: 5.5vh;
     width: auto;
 }
 
@@ -716,11 +788,14 @@ footer {
     font-size: 3vh;
 }
 
+#contatti2 .contatti2-1 p{
+    font-size: 2.5vh;
+}
+
 #contatti2 .contatti2-2 {
     margin: 3vh;
     border: #1f1f1f solid 0.2vh;
 }
-
 
 
 
@@ -751,7 +826,7 @@ Dimensions:
         height: 8vh;
         padding: 3vw; 
         transition: 0;
-        border-bottom: #1f1f1f 0.2vh solid;
+        border-bottom: #1f1f1f 0.2vw solid;
         background-color: #f1f1f1;
         color: #1f1f1f;
     }
@@ -850,7 +925,7 @@ Dimensions:
     }
     
     .menu-toggle ul li a {
-        font-size: 4.5vw;   
+        font-size: 2.4vh;   
         text-decoration: none;
         color: #1f1f1f;
     }
@@ -982,14 +1057,14 @@ Dimensions:
     
     .home1 h2 {
         text-align: center;
-        padding-bottom: 5.5vw;
+        padding-bottom: 4.5vw;
         font-size: 5.5vw;
     }
     
     .home1-1{
         display: flex;
         flex-direction: column;
-        gap: 5.5vw;
+        gap: 4.5vw;
     }
     
     .home1-2 {
@@ -1018,7 +1093,6 @@ Dimensions:
     
     .home2 {
         padding: 5.5vw;
-        padding-inline: 5.5vw;
         background-color: #1f1f1f;
         color: #f1f1f1;
         text-align: center;
@@ -1027,28 +1101,28 @@ Dimensions:
     
     .home2 h2 {
         font-size: 5.5vw;  
-        padding-bottom: 3.5vw;
+        padding-bottom: 2.5vw;
         color: #a3cc39;   
     }
     
     .home2 p {
-        font-size: 4.5vw;
+        font-size: 4vw;
     }
     
     .home3 {
         padding: 5.5vw;
-        padding-inline: 5.5vw;
         text-align: center;
         border-bottom: #1f1f1f solid 0.2vw;
     }
     
     .home3 h2 {
         font-size: 5.5vw;
-        padding-bottom: 3.5vw;     
+        padding-bottom: 2.5vw;  
+        color: #a3cc39;
     }
     
     .home3 p {
-        font-size: 4.5vw;
+        font-size: 4vw;
     }
     
     .home-parallax2 {
@@ -1062,7 +1136,6 @@ Dimensions:
     
     .home4 {
         padding: 5.5vw;
-        padding-inline: 5.5vw;
         text-align: center; 
         background-color: #1f1f1f;
         border-top: #1f1f1f solid 0.2vw;
@@ -1084,6 +1157,50 @@ Dimensions:
     
     .home4 p {
         font-size: 3.5vw;
+    }
+
+    .home5 {
+        padding: 5.5vw;
+        border-bottom: #1f1f1f solid 0.2vw;
+    }
+     
+    .home5 h2 {
+        text-align: center;
+        padding-bottom: 5.5vw;
+        font-size: 5.5vw;
+    }
+    
+    .home5-1{
+        display: flex;
+        flex-direction: column;
+        gap: 5.5vw;
+    }
+    
+    .home5-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5vw;
+        margin-inline: 0vw;
+    }
+    
+    .home5-2 h2 {
+        font-size: 4.5vw;
+        padding-bottom: 0;
+        color: #1f1f1f;
+    }
+    
+    .home5-2 p {
+        text-align: center;
+        font-size: 3.5vw;
+    }
+    .home5-2 img {
+        margin-bottom: 2vh;
+        width: 70vw;
+        height: 40vw;
+        object-fit: cover;
+        object-position: center center;
+        border: #1f1f1f solid 0.2vh;
     }
     
     
@@ -1107,6 +1224,7 @@ Dimensions:
         z-index: -1;
         filter: brightness(30%);
     }
+
     #immobili h1{
         position: absolute;
         top: 50%;
@@ -1114,120 +1232,93 @@ Dimensions:
         font-size: 8vw;
         transform: translate(-50%, -50%)
     }
+
+    .immobili1 {
+        margin: 6vw;
+        margin-bottom: 8vw;
+        display: flex;
+        flex-direction: column;
+        gap: 3vw;
+    }
+    .immobili1 .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-size: 4.5vw;
+        list-style: none;
+    }
+    
+    .immobili1  a{
+      text-decoration: none;
+    }
+    
+    .immobili1 .slideshow-container {
+        position: relative;
+        margin: auto;
+        height: 50vw;
+        width: 100%;
+        text-align: center;
+      }
+      
+    .immobili1 .mySlides {
+        width: 100%;
+        height: 100%;
+        transition:ease 1s;
+        object-fit: cover;
+        object-position: center;
+        z-index: -1;
+        display: none;
+        border: #1f1f1f solid 0.2vw;
+      }
+      
+    .immobili1 .prev, .next{
+        position: absolute;
+        top: 50%;
+        transform: translate(0%, -50%);
+        left: 1%;
+        width: auto;
+        color: #1f1f1f;
+        background-color: rgba(31, 31, 31, 0.2);
+        border-radius: 20%;
+        height: min-content;
+        padding-inline: 2vw;
+        font-weight: bold;
+        font-size: 5vw;
+        transition: 0.6s ease;
+        user-select: none;
+    }
+    
+    .immobili1 .prev:hover {
+        color: #1f1f1f;
+        background-color: #f1f1f1;
+    }
+    
+    .immobili1 .next:hover {
+        color: #1f1f1f;
+        background-color: #f1f1f1;
+    }
+      
+    .immobili1 .next {
+        left: auto;
+        right: 1%;
+    }
     
     #immobili2 {
-        margin: 10vw;
+        padding: 6vw;
+        padding-inline: 12vw;
+        text-align: center; 
+        background-color: #1f1f1f;
+        color: #f1f1f1;
     }
     
-    #immobili2 img{
-        width: 100%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        border: #1f1f1f 0.2vw solid;
+    #immobili2 a {
+        text-decoration: none;
+        color: #f1f1f1;
     }
-    
-    #immobili3 {
-        display: flex;
-        margin: 10vw;
-        justify-content: space-between;
-        
+    #immobili2 h2 {
+        font-size: 4vw;    
     }
-    
-    #immobili3 div {
-        width: 35vw;
-    }
-    
-    #immobili3 a img {
-        width: 100%;
-        border: #1f1f1f 0.2vw solid;
-    }
-    
-    #immobili3 h2 {
-        text-align: center;
-        margin-bottom: 3vw;
-    }
-    
-    
-    /* SLIDESHOW CONTAINER */
-    
-    .slideshow-container {
-      max-width: 1000px;
-      position: relative;
-      margin: auto;
-    }
-    
-    .mySlides {
-      display: none;
-    }
-    
-    .prev, .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      margin-top: -22px;
-      padding: 16px;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-      transition: 0.6s ease;
-      border-radius: 0 3px 3px 0;
-      user-select: none;
-    }
-    
-    .next {
-      right: 0;
-      border-radius: 3px 0 0 3px;
-    }
-    
-    .prev:hover, .next:hover {
-      background-color: rgba(0,0,0,0.8);
-    }
-    
-    .text {
-      color: #f2f2f2;
-      font-size: 15px;
-      padding: 8px 12px;
-      position: absolute;
-      bottom: 8px;
-      width: 100%;
-      text-align: center;
-    }
-    
-    .numbertext {
-      color: #f2f2f2;
-      font-size: 12px;
-      padding: 8px 12px;
-      position: absolute;
-      top: 0;
-    }
-    
-    .dot {
-      cursor: pointer;
-      height: 15px;
-      width: 15px;
-      margin: 0 2px;
-      background-color: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-      transition: background-color 0.6s ease;
-    }
-    
-    .active, .dot:hover {
-      background-color: #717171;
-    }
-    
-    .fade {
-      animation-name: fade;
-      animation-duration: 1.5s;
-    }
-    
-    @keyframes fade {
-      from {opacity: .4}
-      to {opacity: 1}
-    }
-    
     
     /*/ ====================> SISTEMI COSTRUTTIVI <==================== /*/
     #sistemi1 {
@@ -1266,12 +1357,48 @@ Dimensions:
         font-size: 5.5vw;
     }
 
+    #sistemi1-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 6vw;
+        margin: 0;
+    }
+
+    #sistemi1-2 a {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        width: 100%;
+        height: 50vw;
+        border: #1f1f1f solid 0.2vw;
+    }
+
+    #sistemi1-2 a p{
+        position: absolute;
+        z-index: 2;
+        font-size: 4.5vw;
+        color: #f1f1f1;
+    }
+
+    #sistemi1-2 a img{
+        position: absolute;
+        padding: 1vw;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        filter: brightness(50%);
+    }
+
     #sistemi2 {
         display: flex;
         flex-direction: column;
         gap: 4.5vw;
         width: auto;
-        padding-top: 4.5vw;
+        padding-top: 7.5vw;
         padding-bottom: 4.5vw;
     }
 
@@ -1318,6 +1445,107 @@ Dimensions:
         align-items: center;
         justify-content: center;
     }
+    
+    /**/
+    #sistemi3 {
+        display: flex;
+        flex-direction: column;
+        gap: 4.5vw;
+        width: auto;
+        padding-top: 7.5vw;
+        padding-bottom: 4.5vw;
+    }
+
+    .sistemi3-1 {
+        margin: auto;
+        width: 91vw;
+    }
+
+    .sistemi3-1, th, td {
+        border: #1f1f1f solid 0.2vw;
+        vertical-align: middle;
+        text-align: left;
+    }
+
+
+    .sistemi3-1 img {
+        display: block;
+        max-height: 60vw;
+        width: 100%;
+        margin: auto;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .sistemi3-1 div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /**/
+    #sistemi4 {
+        display: flex;
+        flex-direction: column;
+        gap: 4.5vw;
+        width: auto;
+        padding-top: 7.5vw;
+        padding-bottom: 4.5vw;
+    }
+
+    .sistemi4-1 {
+        margin: auto;
+        width: 91vw;
+    }
+
+    .sistemi4-1, th, td {
+        border: #1f1f1f solid 0.2vw;
+        vertical-align: middle;
+        text-align: left;
+    }
+
+
+    .sistemi4-1 img {
+        display: block;
+        max-height: 60vw;
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        margin: auto;
+        
+    }
+
+    .sistemi4-1 div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .indietro {
+        position: fixed;
+        width: 100vw;
+        text-align: end;   
+    }
+    
+    .indietro p {
+        text-decoration: none;
+        color: #1f1f1f;
+        font-size: 4vw;
+        padding-top: 1vw;
+        padding-bottom: 1vw;
+        padding-right: 2.5vw;
+        
+    }
+    
+    .indietro a {
+        text-decoration: none;
+        width: 10vw;
+    }
+    
+    .indietro p:hover {
+        color: #a3cc39;
+    }
+
     
     /*/ ====================> CHI SIAMO <==================== /*/
     #about-section-top {

@@ -7,7 +7,7 @@
         <link rel="icon" href="../assets/favicon/favicon256x256.png" type="image/png">
         <link rel="stylesheet" href="../styles/styles.css" type="text/css" > 
         <script src="../scripts/navbar.js"></script>
-        <script src="../scripts/immobili.js"></script>
+        <script src="../scripts/slideshow.js"></script>
     </head>
     <body>
         <header class="navbar">
@@ -36,36 +36,71 @@
         </header>
 
         <main>
-            <div id="immobili">
-                <img src="../assets/immobili/immobili1.jpg">
+             <div id="immobili">
+                <img src="../assets/immobili/immobili1.png">
                 <h1>I NOSTRI IMMOBILI</h1>
             </div>
-            <div id="immobili2">
-                <img src="../assets/immobili/renders/render.jpeg">
-                <img src="../assets/immobili/renders/render2.jpeg" style="margin-top: 6vh;">
+            <div class="immobili1">
+                <div class="slideshow-container">
+                    <img class="slides1 mySlides" src="../assets/immobili/renders/h1-render1.jpeg">
+                    <img class="slides1 mySlides" src="../assets/immobili/renders/h1-render2.jpeg">
+                    <img class="slides1 mySlides" src="../assets/immobili/renders/h1-render3.jpeg">
+                    <img class="slides1 mySlides" src="../assets/immobili/renders/render.jpeg">
+                    <img class="slides1 mySlides" src="../assets/immobili/renders/render2.jpeg">
+                    <a class="prev" onclick="changeSlide1(-1)">&#10094;</a>
+                    <a class="next" onclick="changeSlide1(1)">&#10095;</a>
+                    <div class="dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <ul class="info">
+                    <li>Indirizzo: </li>
+                    <li>Metri quadri: </li>
+                    <li>Sistemi costruttivi: <a href="sistemi-costruttivi/in-legno.html"></a></li>
+                </ul>
             </div>
-            <div id="immobili3">
-                <div id="immobile1">
-                    <h2>"CASA 1"</h2>
-                    <a href="./immobili/casa1.html"><img src="../assets/immobili/renders/h1-render1.jpeg"></a>
+            <div class="immobili1">
+                <div class="slideshow-container">
+                    <img class="slides2 mySlides" src="../assets/immobili/renders/h2-render1.jpeg">
+                    <img class="slides2 mySlides" src="../assets/immobili/renders/h2-render2.jpeg">
+                    <img class="slides2 mySlides" src="../assets/immobili/renders/h2-render3.jpeg">
+                    <img class="slides2 mySlides" src="../assets/immobili/renders/render.jpeg">
+                    <img class="slides2 mySlides" src="../assets/immobili/renders/render2.jpeg">
+                    <a class="prev" onclick="changeSlide2(-1)">&#10094;</a>
+                    <a class="next" onclick="changeSlide2(1)">&#10095;</a>
+                    <div class="dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
-                <div id="immobile2"> 
-                    <h2>"CASA 2"</h2>
-                    <a href="./immobili/casa2.html"><img src="../assets/immobili/renders/h2-render1.jpeg"></a>
-                </div>
-            </div> 
+                <ul class="info">
+                    <li>Indirizzo: </li>
+                    <li>Metri quadri: </li>
+                    <li>Sistemi costruttivi: <a href="sistemi-costruttivi/in-legno.html"></a></li>
+                </ul>
+            </div>
+            <div id="immobili2">
+                <a href="../pages/contatti.html"><h2>CLICCA QUÌ PER CONTATTARCI E AVERE MAGGIORI INFORMAZIONI!</h2></a>
+            </div>
+            
         </main>
 
         <footer>
             <div class="footerMain">
                 <img src="../assets/logo/new-logo.png" alt="logo">
                 <div>
-                    <h2>CONTATTI</h2>
+                    <h2>INFO</h2>
                     <ul>
                         <li>BN-HOUSE SRL</li>
                         <li>VIA CALTANA 191/193, CAMPODARSEGO (PD)</li>
-                        <li>test@dominio.it</li>
-                        <li>email@prova.it</li>
+                        <li>info@bn-house.it</li>
                         <li>+39 331 944 7143</li>
                     </ul>
                 </div>
