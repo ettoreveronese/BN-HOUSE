@@ -83,6 +83,7 @@ body {
 }
 
 .navbar ul li a {
+    font-size: 2.8vh;
     text-decoration: none;
     color: #1f1f1f;
 }
@@ -92,6 +93,7 @@ body {
 }
 
 .top-navbar {
+    top: 0;
     z-index: 2;
     position: fixed;
     display: flex;
@@ -214,10 +216,10 @@ footer {
 
 #welcome h1{
     position: absolute;
-    padding-top: 70vh;
+    padding-top: 75vh;
     padding-left: 8vh;
     z-index: 30;
-    font-size: 6vh;
+    font-size: 5.5vh;
     color:#f1f1f1
 }
 
@@ -271,14 +273,14 @@ footer {
 .home-parallax1 {
     background-image: url("../assets/home/home2.png");
     filter: brightness(60%);
-    min-height: 40vh;
+    min-height: 60vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.home2 {
+.home2 {    
     padding: 6vh;
     padding-left: 40vw;
     background-color: #1f1f1f;
@@ -287,7 +289,7 @@ footer {
 }
 
 .home2 h2 {
-    font-size: 4.5vh;  
+    font-size: 4vh;  
     padding-bottom: 3vh;
     color: #f1f1f1;   
 }
@@ -303,7 +305,7 @@ footer {
 }
 
 .home3 h2 {
-    font-size: 4.5vh;
+    font-size: 4vh;
     padding-bottom: 3vh;     
 }
 
@@ -334,16 +336,12 @@ footer {
     color: #f1f1f1;
 }
 .home4 h2 {
-    font-size: 4vh;    
+    font-size: 3vh;    
 }
 
 .home4 h2:hover {
     color: #a3cc39;
     cursor: pointer;
-}
-
-.home4 p {
-    font-size: 2.5vh;
 }
 
 .home5 {
@@ -406,7 +404,7 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center center;
+    object-position: center;
     z-index: -1;
     filter: brightness(30%);
 }
@@ -418,7 +416,8 @@ footer {
 }
 
 .immobili1 {
-    margin: 12vh;
+    margin-top: 12vh;
+    margin-bottom: 12vh;
     display: flex;
     flex-direction: column;
     gap: 2.5vh;
@@ -433,14 +432,14 @@ footer {
 }
 
 .immobili1  a{
-  text-decoration: none;
+    color: #1f1f1f;
 }
 
 .immobili1 .slideshow-container {
     position: relative;
     margin: auto;
-    height: 60vh;
-    width: 60vw;
+    height: 32vw;
+    width: 56vw;
     text-align: center;
   }
   
@@ -500,7 +499,7 @@ footer {
     color: #f1f1f1;
 }
 #immobili2 h2 {
-    font-size: 3.5vh;
+    font-size: 3vh;
 }
 
 

@@ -1,8 +1,8 @@
 // NAVBAR ANIMATION ON SCROLL
-let prevScrollPos = window.pageYOffset;
+let prevScrollPos = window.scrollY;
 
-window.onscroll = function() {
-    const currentScrollPos = window.pageYOffset;
+window.addEventListener("scroll", () => {
+    const currentScrollPos = window.scrollY;
     const navbar = document.querySelector(".navbar");
 
     if (prevScrollPos > currentScrollPos) {
@@ -20,7 +20,7 @@ window.onscroll = function() {
     }
     
     prevScrollPos = currentScrollPos;
-};
+})
 
 // LOAD THE RIGHT NAVBAR
 document.addEventListener("DOMContentLoaded", function() {
