@@ -371,7 +371,14 @@ footer {
 .home5-2 h2 {
     font-size: 3vh;
     padding-bottom: 0;
+}
+
+.home5-2 h2 a{
     color: #1f1f1f;
+}
+
+.home5-2 h2 a:hover{
+    color: #a3cc39;
 }
 
 .home5-2 p {
@@ -831,11 +838,11 @@ Dimensions:
     }
 
     .mobile-navbar .homebtn {
-        height: 3.5vh;
+        height: 3vh;
     }
     .mobile-navbar .homebtn img {
         margin: 0; 
-        height: 3.5vh;
+        height: 3vh;
         transition: 0.4s;
     }
     
@@ -996,7 +1003,6 @@ Dimensions:
         padding-inline: 3vw;
     }
     .footerCopyright a{
-        text-decoration: none;
         color: #1f1f1f;
     }
     
@@ -1101,7 +1107,7 @@ Dimensions:
     .home2 h2 {
         font-size: 5.5vw;  
         padding-bottom: 2.5vw;
-        color: #a3cc39;   
+        color: #f1f1f1;   
     }
     
     .home2 p {
@@ -1116,8 +1122,7 @@ Dimensions:
     
     .home3 h2 {
         font-size: 5.5vw;
-        padding-bottom: 2.5vw;  
-        color: #a3cc39;
+        padding-bottom: 2.5vw;    
     }
     
     .home3 p {
@@ -1146,8 +1151,7 @@ Dimensions:
         color: #f1f1f1;
     }
     .home4 h2 {
-        font-size: 5.5vw; 
-        padding-bottom: 3.5vw;      
+        font-size: 4.5vw;    
     }
     .home4 h2:hover {
         color: #a3cc39;
