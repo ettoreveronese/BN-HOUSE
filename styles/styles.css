@@ -188,7 +188,6 @@ footer {
     padding-inline: 3vh;
 }
 .footerCopyright a{
-    text-decoration: none;
     color: #1f1f1f;
 }
 
@@ -371,6 +370,7 @@ footer {
 .home5-2 h2 {
     font-size: 3vh;
     padding-bottom: 0;
+    color: #1f1f1f;
 }
 
 .home5-2 h2 a{
@@ -634,6 +634,82 @@ footer {
     justify-content: center;
 }
 
+/**/
+#sistemi3 {
+    display: flex;
+    flex-direction: column;
+    gap: 4.5vw;
+    width: auto;
+    padding-top: 5vh;
+    padding-bottom: 4.5vw;
+
+}
+
+.sistemi3-1 {
+    margin: auto;
+    width: 60vw;
+}
+
+.sistemi3-1, th, td {
+    border: #1f1f1f solid 0.2vw;
+    vertical-align: middle;
+    text-align: left;
+}
+
+
+.sistemi3-1 img {
+    display: block;
+    max-height: 60vw;
+    width: 100%;
+    margin: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+.sistemi3-1 div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/**/
+#sistemi4 {
+    display: flex;
+    flex-direction: column;
+    gap: 4.5vw;
+    width: auto;
+    padding-top: 5vh;
+    padding-bottom: 4.5vw;
+}
+
+.sistemi4-1 {
+    margin: auto;
+    width: 60vw;
+}
+
+.sistemi4-1, th, td {
+    border: #1f1f1f solid 0.2vw;
+    vertical-align: middle;
+    text-align: left;
+}
+
+
+.sistemi4-1 img {
+    display: block;
+    max-height: 60vw;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    margin: auto;
+    
+}
+
+.sistemi4-1 div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .indietro {
     position: fixed;
     width: 100vw;
@@ -649,13 +725,12 @@ footer {
     padding-right: 1.5vh;
 }
 
-.indietro a {
-    text-decoration: none;
+.indietro a:hover {
+    color: #a3cc39;
 }
 
 .indietro p:hover {
     color: #a3cc39;
-
 }
 
 /*/ ====================> CHI SIAMO <==================== /*/

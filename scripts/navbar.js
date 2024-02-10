@@ -5,10 +5,10 @@ window.addEventListener("scroll", () => {
     const currentScrollPos = window.scrollY;
     const navbar = document.querySelector(".navbar");
 
-    if (prevScrollPos > currentScrollPos) {
-        navbar.style.top = "0";
-    } else {
+    if (!(prevScrollPos > currentScrollPos)) {
         navbar.style.top = "-10vh";
+    } else {
+        navbar.style.top = "0";
     }
     
     if(!(window.scrollY > 0)) {
