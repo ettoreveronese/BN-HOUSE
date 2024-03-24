@@ -356,7 +356,7 @@ footer {
 
 .home5-1{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .home5-2 {
@@ -387,8 +387,8 @@ footer {
 }
 .home5-2 img {
     margin-bottom: 2vh;
-    width: 25vw;
-    height: 15vw;
+    width: 35vw;
+    height: 22vw;
     object-fit: cover;
     object-position: center center;
     border: #1f1f1f solid 0.2vh;
